@@ -17,6 +17,7 @@ export const SideMenu = () => {
             gap={16}
             position="sticky"
             top={0}
+            bottom={0}
             bg="#fff"
             zIndex={"banner"}
         >

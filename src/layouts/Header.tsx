@@ -25,6 +25,7 @@ export const Header = () => (
         justifyContent="space-between"
         pos="sticky"
         top={0}
+        zIndex="10"
     >
         <Heading size={"lg"}>Dashboard</Heading>
         <HStack pl={8} borderLeft="1px solid #e5e5e5" h="full" spacing={12}>

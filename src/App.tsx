@@ -5,13 +5,10 @@ import {
     Flex,
     Grid,
     HStack,
+    Heading,
     Input,
     InputGroup,
     InputLeftElement,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuList,
     Text,
     VStack,
 } from "@chakra-ui/react";
@@ -19,11 +16,17 @@ import { Header, SideMenu } from "./layouts";
 import { BiSearch } from "react-icons/bi";
 import { LuSettings2 } from "react-icons/lu";
 import { IoMdAdd } from "react-icons/io";
+import { AdminItem } from "./components/AdminItem";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 
 function App() {
     return (
-        <Grid bg="#F3F3F3" templateColumns="94px auto">
+        <Grid
+            bg="#F3F3F3"
+            h="fit-content"
+            templateColumns="94px auto"
+            pos="relative"
+        >
             <SideMenu />
             <Flex direction="column">
                 <Header />
@@ -35,6 +38,7 @@ function App() {
                         bg="#fff"
                         borderRadius={"md"}
                         border="1px solid #e5e5e5"
+                        position="relative"
                     >
                         <HStack
                             borderBottom="1px solid #e5e5e5"
@@ -75,7 +79,7 @@ function App() {
                         <Box
                             pb={24}
                             h="100%"
-                            overflowY="scroll"
+                            overflowY="auto"
                             transition="visibility 300ms"
                             __css={{
                                 "&::-webkit-scrollbar": {
@@ -94,146 +98,137 @@ function App() {
                                 },
                             }}
                         >
-                            <Box
-                                pt={4}
-                                px={6}
-                                transition="all ease 300ms"
-                                _hover={{
-                                    background: "#EDE5F4",
-                                }}
-                            >
-                                <Flex
-                                    justifyContent="space-between"
-                                    alignItems="center"
-                                    borderBottom="1px solid #e5e5e5"
-                                    pb={4}
-                                >
-                                    <HStack
-                                        spacing={4}
-                                        alignContent="flex-start"
-                                    >
-                                        <Box pos="relative">
-                                            <Avatar size="md" />
-                                            <Box
-                                                w={5}
-                                                h={5}
-                                                borderRadius="full"
-                                                bg="green.500"
-                                                pos="absolute"
-                                                right="-8px"
-                                                bottom={0}
-                                                display="flex"
-                                                justifyContent="center"
-                                                alignItems="center"
-                                                color="#fff"
-                                            >
-                                                <BiDotsVerticalRounded />
-                                            </Box>
-                                        </Box>
-                                        <VStack
-                                            spacing={0}
-                                            alignItems="flex-start"
-                                        >
-                                            <Text fontWeight="bold">
-                                                Gregory Tran
-                                            </Text>
-                                            <Text fontSize="small">
-                                                ADMIN-0020
-                                            </Text>
-                                        </VStack>
-                                    </HStack>
-                                    <HStack spacing={4} alignItems="flex-start">
-                                        <Text color="#919191">4 days ago</Text>
-                                        <Menu placement="left-start">
-                                            <MenuButton>
-                                                <Button
-                                                    p={0}
-                                                    borderRadius="full"
-                                                    variant="ghost"
-                                                    fontSize="3xl"
-                                                >
-                                                    <BiDotsVerticalRounded />
-                                                </Button>
-                                            </MenuButton>
-                                            <MenuList>
-                                                <MenuItem>
-                                                    Edit profile
-                                                </MenuItem>
-                                                <MenuItem>De-activate</MenuItem>
-                                                <MenuItem color="red.500">
-                                                    Delete
-                                                </MenuItem>
-                                            </MenuList>
-                                        </Menu>
-                                    </HStack>
-                                </Flex>
-                            </Box>
-                            <Box
-                                pt={4}
-                                px={6}
-                                transition="all ease 300ms"
-                                _hover={{
-                                    background: "#EDE5F4",
-                                }}
-                            >
-                                <Flex
-                                    justifyContent="space-between"
-                                    alignItems="center"
-                                    borderBottom="1px solid #e5e5e5"
-                                    pb={4}
-                                >
-                                    <HStack
-                                        spacing={4}
-                                        alignContent="flex-start"
-                                    >
-                                        <Avatar size="md" />
-                                        <VStack
-                                            spacing={0}
-                                            alignItems="flex-start"
-                                        >
-                                            <Text fontWeight="bold">
-                                                Gregory Tran
-                                            </Text>
-                                            <Text fontSize="small">
-                                                ADMIN-0020
-                                            </Text>
-                                        </VStack>
-                                    </HStack>
-                                    <HStack spacing={4} alignItems="flex-start">
-                                        <Text color="#919191">4 days ago</Text>
-                                        <Menu placement="left-start">
-                                            <MenuButton>
-                                                <Button
-                                                    p={0}
-                                                    borderRadius="full"
-                                                    variant="ghost"
-                                                    fontSize="3xl"
-                                                >
-                                                    <BiDotsVerticalRounded />
-                                                </Button>
-                                            </MenuButton>
-                                            <MenuList>
-                                                <MenuItem>
-                                                    Edit profile
-                                                </MenuItem>
-                                                <MenuItem>De-activate</MenuItem>
-                                                <MenuItem color="red.500">
-                                                    Delete
-                                                </MenuItem>
-                                            </MenuList>
-                                        </Menu>
-                                    </HStack>
-                                </Flex>
-                            </Box>
+                            <AdminItem />
+                            <AdminItem />
+                            <AdminItem />
                         </Box>
                     </Box>
                     <Box
-                        h={"80vh"}
+                        maxH={"fit-content"}
                         w="60%"
                         bg="#fff"
                         borderRadius={"md"}
-                        border="1px solid #e5e5e5"
-                    ></Box>
+                    >
+                        <Flex
+                            borderBottom="1px solid #e5e5e5"
+                            justifyContent="space-between"
+                            pr={6}
+                        >
+                            <HStack px={6} spacing={0} p={0}>
+                                <Text px={8} py={5}>
+                                    Summary
+                                </Text>
+                                <Text
+                                    px={8}
+                                    py={5}
+                                    fontWeight="bold"
+                                    borderBottom="3px solid #f7f48f"
+                                >
+                                    Profile
+                                </Text>
+                            </HStack>
+                            <HStack fontWeight="bold" p={0}>
+                                <Button
+                                    m={0}
+                                    p={0}
+                                    variant="ghost"
+                                    bg="#F1F1F1"
+                                    color="#3c3c3c"
+                                    fontSize="lg"
+                                    borderRadius="full"
+                                >
+                                    <IoMdAdd />
+                                </Button>
+                                <Button
+                                    m={0}
+                                    p={0}
+                                    variant="ghost"
+                                    bg="#F1F1F1"
+                                    color="#3c3c3c"
+                                    fontSize="lg"
+                                    borderRadius="full"
+                                >
+                                    <IoMdAdd />
+                                </Button>
+                                <Button
+                                    m={0}
+                                    p={0}
+                                    variant="ghost"
+                                    bg="#F1F1F1"
+                                    color="#3c3c3c"
+                                    fontSize="lg"
+                                    borderRadius="full"
+                                >
+                                    <IoMdAdd />
+                                </Button>
+                            </HStack>
+                        </Flex>
+                        <Flex
+                            justifyContent="space-between"
+                            px={6}
+                            py={6}
+                            w="100%"
+                        >
+                            <Flex gap={8}>
+                                <Avatar size="lg" />
+                                <VStack spacing={6} align="flex-start">
+                                    <VStack align="flex-start" spacing={0}>
+                                        <Heading size="lg">
+                                            Gregory Tran
+                                        </Heading>
+                                        <Text>ADMIN-0020</Text>
+                                    </VStack>
+                                    <VStack align="flex-start">
+                                        <Text>tran@shora.cos</Text>
+                                    </VStack>
+                                    <VStack align="flex-start" spacing={0}>
+                                        <Text fontSize="sm" color="#919191">
+                                            Phone number
+                                        </Text>
+                                        <Text>+257 79 28 4124</Text>
+                                    </VStack>
+                                    <VStack align="flex-start" spacing={0}>
+                                        <Text fontSize="sm" color="#919191">
+                                            Home address
+                                        </Text>
+                                        <Text>+257 79 28 4124</Text>
+                                    </VStack>
+                                    <VStack align="flex-start" spacing={0}>
+                                        <Text fontSize="sm" color="#919191">
+                                            Permission
+                                        </Text>
+                                        <Text>Can view</Text>
+                                    </VStack>
+                                    <VStack align="flex-start" spacing={0}>
+                                        <Text fontSize="sm" color="#919191">
+                                            Status
+                                        </Text>
+                                        <Text>Activate</Text>
+                                    </VStack>
+                                    <VStack align="flex-start" spacing={0}>
+                                        <Text fontSize="sm" color="#919191">
+                                            Password
+                                        </Text>
+                                        <Text>************</Text>
+                                    </VStack>
+                                </VStack>
+                            </Flex>
+                            <VStack align="flex-end" spacing={12}>
+                                <HStack>
+                                    <Button size="sm">Edit profile</Button>
+                                    <Button size="sm">
+                                        <BiDotsVerticalRounded />
+                                    </Button>
+                                </HStack>
+                                <Text fontSize="sm">
+                                    Joined:{" "}
+                                    <Text as="span" color="#919191">
+                                        4 days ago
+                                    </Text>
+                                </Text>
+                            </VStack>
+                        </Flex>
+                    </Box>
                 </Flex>
             </Flex>
         </Grid>
