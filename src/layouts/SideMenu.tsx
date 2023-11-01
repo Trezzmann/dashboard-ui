@@ -18,6 +18,7 @@ export const SideMenu = () => {
             position="sticky"
             top={0}
             bg="#fff"
+            zIndex={"banner"}
         >
             <Flex
                 pt={5}
@@ -32,7 +33,7 @@ export const SideMenu = () => {
                     p={3}
                     alignItems="center"
                     spacing={1}
-                    color="#565656"
+                    color="#767676"
                     transition="all ease .3s"
                     _hover={{ color: "#500586" }}
                     cursor="pointer"
@@ -46,7 +47,7 @@ export const SideMenu = () => {
                     p={3}
                     alignItems="center"
                     spacing={1}
-                    color="#565656"
+                    color="#767676"
                     transition="all ease .3s"
                     _hover={{ color: "#500586" }}
                     cursor="pointer"
@@ -60,7 +61,7 @@ export const SideMenu = () => {
                     p={3}
                     alignItems="center"
                     spacing={1}
-                    color="#565656"
+                    color="#767676"
                     transition="all ease .3s"
                     _hover={{ color: "#500586" }}
                     cursor="pointer"
@@ -74,7 +75,7 @@ export const SideMenu = () => {
                     p={3}
                     alignItems="center"
                     spacing={1}
-                    color="#565656"
+                    color="#767676"
                     transition="all ease .3s"
                     _hover={{ color: "#500586" }}
                     cursor="pointer"
@@ -88,7 +89,7 @@ export const SideMenu = () => {
                     p={3}
                     alignItems="center"
                     spacing={1}
-                    color="#565656"
+                    color="#767676"
                     transition="all ease .3s"
                     _hover={{ color: "#500586" }}
                     cursor="pointer"
@@ -102,7 +103,7 @@ export const SideMenu = () => {
                     p={3}
                     alignItems="center"
                     spacing={1}
-                    color="#565656"
+                    color="#767676"
                     transition="all ease .3s"
                     _hover={{ color: "#500586" }}
                     cursor="pointer"
@@ -116,10 +117,12 @@ export const SideMenu = () => {
                     p={3}
                     alignItems="center"
                     spacing={1}
-                    color="#565656"
+                    color="#500586"
                     transition="all ease .3s"
                     _hover={{ color: "#500586" }}
                     cursor="pointer"
+                    fontWeight="bold"
+                    justifyContent="center"
                 >
                     <Box fontSize={"2xl"}>
                         <FaUserCog />
