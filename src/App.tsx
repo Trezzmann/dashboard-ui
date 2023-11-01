@@ -112,7 +112,24 @@ function App() {
                                         spacing={4}
                                         alignContent="flex-start"
                                     >
-                                        <Avatar size="md" />
+                                        <Box pos="relative">
+                                            <Avatar size="md" />
+                                            <Box
+                                                w={5}
+                                                h={5}
+                                                borderRadius="full"
+                                                bg="green.500"
+                                                pos="absolute"
+                                                right="-8px"
+                                                bottom={0}
+                                                display="flex"
+                                                justifyContent="center"
+                                                alignItems="center"
+                                                color="#fff"
+                                            >
+                                                <BiDotsVerticalRounded />
+                                            </Box>
+                                        </Box>
                                         <VStack
                                             spacing={0}
                                             alignItems="flex-start"
