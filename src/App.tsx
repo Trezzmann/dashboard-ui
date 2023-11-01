@@ -1,10 +1,11 @@
-import { Button } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { SideMenu } from "./layouts";
 
 function App() {
     return (
-        <div>
-            <Button colorScheme="green">Button</Button>
-        </div>
+        <Box bg="#F3F3F3">
+            <SideMenu />
+        </Box>
     );
 }
 
