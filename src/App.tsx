@@ -1,5 +1,25 @@
-import { Box, Button, Flex, Grid } from "@chakra-ui/react";
+import {
+    Avatar,
+    Box,
+    Button,
+    Flex,
+    Grid,
+    HStack,
+    Input,
+    InputGroup,
+    InputLeftElement,
+    Menu,
+    MenuButton,
+    MenuItem,
+    MenuList,
+    Text,
+    VStack,
+} from "@chakra-ui/react";
 import { Header, SideMenu } from "./layouts";
+import { BiSearch } from "react-icons/bi";
+import { LuSettings2 } from "react-icons/lu";
+import { IoMdAdd } from "react-icons/io";
+import { BiDotsVerticalRounded } from "react-icons/bi";
 
 function App() {
     return (
@@ -16,62 +36,178 @@ function App() {
                         borderRadius={"md"}
                         border="1px solid #e5e5e5"
                     >
-                        <Box
+                        <HStack
                             borderBottom="1px solid #e5e5e5"
                             py={3}
-                            px={4}
+                            px={6}
                             position="sticky"
                             top={0}
                             bg="#fff"
                         >
-                            <Button>Press</Button>
-                        </Box>
+                            <InputGroup>
+                                <InputLeftElement
+                                    pointerEvents="none"
+                                    fontSize="2xl"
+                                    color="gray.500"
+                                >
+                                    <BiSearch />
+                                </InputLeftElement>
+                                <Input placeholder="Search" bg="#F3F3F3" />
+                            </InputGroup>
+                            <Button
+                                variant="ghost"
+                                color="#500586"
+                                fontSize="3xl"
+                            >
+                                <LuSettings2 />
+                            </Button>
+                            <Button
+                                p={0}
+                                variant="solid"
+                                bg="#500586"
+                                color="#fff"
+                                fontSize="3xl"
+                                borderRadius="full"
+                            >
+                                <IoMdAdd />
+                            </Button>
+                        </HStack>
                         <Box
-                            px={4}
-                            pt={2}
-                            pb={"24"}
+                            pb={24}
                             h="100%"
                             overflowY="scroll"
+                            transition="visibility 300ms"
+                            __css={{
+                                "&::-webkit-scrollbar": {
+                                    w: "1",
+                                },
+                                "&::-webkit-scrollbar-track": {
+                                    w: "1",
+                                },
+                                "&::-webkit-scrollbar-thumb": {
+                                    visibility: "hidden",
+                                    borderRadius: "full",
+                                    bg: `#e7e7e7`,
+                                },
+                                "&:hover::-webkit-scrollbar-thumb": {
+                                    visibility: "visible",
+                                },
+                            }}
                         >
-                            Sure, I'd be happy to help you with your question.
-                            To start, let's break down the question into smaller
-                            parts. You want to know more about the best way to
-                            structure a React project, specifically in terms of
-                            the folder structure and file organization. First,
-                            let's talk about the overall folder structure. A
-                            common way to organize a React project is to have a
-                            src folder that contains all the code for the
-                            application, and a public folder that contains the
-                            static assets of the application, such as images and
-                            the main entry point for the application. Within the
-                            src folder, you can create subfolders to organize
-                            your code into different components or features of
-                            the application. For example, you might have a
-                            components folder that contains all the reusable
-                            components of the application, a pages folder that
-                            contains the different pages of the application, and
-                            a utils folder that contains utility functions that
-                            can be used throughout the application. In terms of
-                            file organization, it's generally a good idea to
-                            keep related files together in the same folder. For
-                            example, if you have a Button component, you might
-                            have a Button.js file that contains the code for the
-                            component, a Button.test.js file that contains tests
-                            for the component, and a Button.styles.css file that
-                            contains the styles for the component. Another
-                            important aspect of file organization is naming
-                            conventions. It's a good idea to use descriptive
-                            names for your files and folders, so that it's easy
-                            to understand what they contain. For example,
-                            instead of having a file named component1.js, you
-                            might have a file named Button.js that clearly
-                            indicates what the file contains. Finally, it's a
-                            good idea to use a version control system, such as
-                            Git, to manage your code and collaborate with
-                            others. This will allow you to track changes to your
-                            code over time, and easily revert back to previous
-                            versions if necessary. I hope this helps! Let me
-                            know if you have any other questions.
+                            <Box
+                                pt={4}
+                                px={6}
+                                transition="all ease 300ms"
+                                _hover={{
+                                    background: "#EDE5F4",
+                                }}
+                            >
+                                <Flex
+                                    justifyContent="space-between"
+                                    alignItems="center"
+                                    borderBottom="1px solid #e5e5e5"
+                                    pb={4}
+                                >
+                                    <HStack
+                                        spacing={4}
+                                        alignContent="flex-start"
+                                    >
+                                        <Avatar size="md" />
+                                        <VStack
+                                            spacing={0}
+                                            alignItems="flex-start"
+                                        >
+                                            <Text fontWeight="bold">
+                                                Gregory Tran
+                                            </Text>
+                                            <Text fontSize="small">
+                                                ADMIN-0020
+                                            </Text>
+                                        </VStack>
+                                    </HStack>
+                                    <HStack spacing={4} alignItems="flex-start">
+                                        <Text color="#919191">4 days ago</Text>
+                                        <Menu placement="left-start">
+                                            <MenuButton>
+                                                <Button
+                                                    p={0}
+                                                    borderRadius="full"
+                                                    variant="ghost"
+                                                    fontSize="3xl"
+                                                >
+                                                    <BiDotsVerticalRounded />
+                                                </Button>
+                                            </MenuButton>
+                                            <MenuList>
+                                                <MenuItem>
+                                                    Edit profile
+                                                </MenuItem>
+                                                <MenuItem>De-activate</MenuItem>
+                                                <MenuItem color="red.500">
+                                                    Delete
+                                                </MenuItem>
+                                            </MenuList>
+                                        </Menu>
+                                    </HStack>
+                                </Flex>
+                            </Box>
+                            <Box
+                                pt={4}
+                                px={6}
+                                transition="all ease 300ms"
+                                _hover={{
+                                    background: "#EDE5F4",
+                                }}
+                            >
+                                <Flex
+                                    justifyContent="space-between"
+                                    alignItems="center"
+                                    borderBottom="1px solid #e5e5e5"
+                                    pb={4}
+                                >
+                                    <HStack
+                                        spacing={4}
+                                        alignContent="flex-start"
+                                    >
+                                        <Avatar size="md" />
+                                        <VStack
+                                            spacing={0}
+                                            alignItems="flex-start"
+                                        >
+                                            <Text fontWeight="bold">
+                                                Gregory Tran
+                                            </Text>
+                                            <Text fontSize="small">
+                                                ADMIN-0020
+                                            </Text>
+                                        </VStack>
+                                    </HStack>
+                                    <HStack spacing={4} alignItems="flex-start">
+                                        <Text color="#919191">4 days ago</Text>
+                                        <Menu placement="left-start">
+                                            <MenuButton>
+                                                <Button
+                                                    p={0}
+                                                    borderRadius="full"
+                                                    variant="ghost"
+                                                    fontSize="3xl"
+                                                >
+                                                    <BiDotsVerticalRounded />
+                                                </Button>
+                                            </MenuButton>
+                                            <MenuList>
+                                                <MenuItem>
+                                                    Edit profile
+                                                </MenuItem>
+                                                <MenuItem>De-activate</MenuItem>
+                                                <MenuItem color="red.500">
+                                                    Delete
+                                                </MenuItem>
+                                            </MenuList>
+                                        </Menu>
+                                    </HStack>
+                                </Flex>
+                            </Box>
                         </Box>
                     </Box>
                     <Box
