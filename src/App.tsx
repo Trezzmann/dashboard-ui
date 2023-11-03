@@ -14,11 +14,10 @@ import {
 } from "@chakra-ui/react";
 import { Header, SideMenu } from "./layouts";
 import { BiSearch } from "react-icons/bi";
-import { LuSettings2 } from "react-icons/lu";
 import { IoMdAdd } from "react-icons/io";
 import { AdminItem } from "./components/AdminItem";
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import { MdMailOutline, MdModeEdit } from "react-icons/md";
+import { MdMailOutline, MdModeEdit, MdTune } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import { Footer } from "./layouts/Footer";
 
@@ -50,6 +49,7 @@ function App() {
                             position="sticky"
                             top={0}
                             bg="#fff"
+                            spacing={3}
                         >
                             <InputGroup>
                                 <InputLeftElement
@@ -64,9 +64,10 @@ function App() {
                             <Button
                                 variant="ghost"
                                 color="#500586"
-                                fontSize="3xl"
+                                fontSize="2xl"
+                                p={0}
                             >
-                                <LuSettings2 />
+                                <MdTune />
                             </Button>
                             <Button
                                 p={0}
@@ -83,7 +84,6 @@ function App() {
                             pb={24}
                             h="100%"
                             overflowY="auto"
-                            transition="visibility 300ms"
                             __css={{
                                 "&::-webkit-scrollbar": {
                                     w: "1",
@@ -94,7 +94,7 @@ function App() {
                                 "&::-webkit-scrollbar-thumb": {
                                     visibility: "hidden",
                                     borderRadius: "full",
-                                    bg: `#e7e7e7`,
+                                    bg: `#dcdcdc`,
                                 },
                                 "&:hover::-webkit-scrollbar-thumb": {
                                     visibility: "visible",
@@ -107,7 +107,7 @@ function App() {
                         </Box>
                     </Box>
                     <Box
-                        maxH={"85vh"}
+                        // maxH={"85vh"}
                         w="60%"
                         bg="#fff"
                         borderRadius={"md"}
