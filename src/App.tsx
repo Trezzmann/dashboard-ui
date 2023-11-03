@@ -18,6 +18,9 @@ import { LuSettings2 } from "react-icons/lu";
 import { IoMdAdd } from "react-icons/io";
 import { AdminItem } from "./components/AdminItem";
 import { BiDotsVerticalRounded } from "react-icons/bi";
+import { MdMailOutline, MdModeEdit } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
+import { Footer } from "./layouts/Footer";
 
 function App() {
     return (
@@ -32,7 +35,7 @@ function App() {
                 <Header />
                 <Flex px={16} py={6} gap={4}>
                     <Box
-                        maxH={"80vh"}
+                        maxH={"85vh"}
                         overflowY="hidden"
                         w="40%"
                         bg="#fff"
@@ -104,32 +107,40 @@ function App() {
                         </Box>
                     </Box>
                     <Box
-                        maxH={"fit-content"}
+                        maxH={"85vh"}
                         w="60%"
                         bg="#fff"
                         borderRadius={"md"}
+                        border="1px solid #e5e5e5"
                     >
                         <Flex
                             borderBottom="1px solid #e5e5e5"
                             justifyContent="space-between"
                             pr={6}
+                            py={4}
                         >
-                            <HStack px={6} spacing={0} p={0}>
-                                <Text px={8} py={5}>
-                                    Summary
-                                </Text>
-                                <Text
+                            <HStack px={6} spacing={0} align="center" p={0}>
+                                <Box px={8}>Summary</Box>
+                                <Box
                                     px={8}
-                                    py={5}
                                     fontWeight="bold"
-                                    borderBottom="3px solid #f7f48f"
+                                    position="relative"
+                                    _after={{
+                                        content: `""`,
+                                        position: "absolute",
+                                        top: "41px",
+                                        left: 0,
+                                        height: "3px",
+                                        width: "100%",
+                                        background: "#E0BE81",
+                                    }}
                                 >
                                     Profile
-                                </Text>
+                                </Box>
                             </HStack>
                             <HStack fontWeight="bold" p={0}>
                                 <Button
-                                    m={0}
+                                    size="sm"
                                     p={0}
                                     variant="ghost"
                                     bg="#F1F1F1"
@@ -137,10 +148,10 @@ function App() {
                                     fontSize="lg"
                                     borderRadius="full"
                                 >
-                                    <IoMdAdd />
+                                    <MdModeEdit />
                                 </Button>
                                 <Button
-                                    m={0}
+                                    size="sm"
                                     p={0}
                                     variant="ghost"
                                     bg="#F1F1F1"
@@ -148,10 +159,10 @@ function App() {
                                     fontSize="lg"
                                     borderRadius="full"
                                 >
-                                    <IoMdAdd />
+                                    <MdMailOutline />
                                 </Button>
                                 <Button
-                                    m={0}
+                                    size="sm"
                                     p={0}
                                     variant="ghost"
                                     bg="#F1F1F1"
@@ -159,7 +170,7 @@ function App() {
                                     fontSize="lg"
                                     borderRadius="full"
                                 >
-                                    <IoMdAdd />
+                                    <IoClose />
                                 </Button>
                             </HStack>
                         </Flex>
@@ -170,17 +181,35 @@ function App() {
                             w="100%"
                         >
                             <Flex gap={8}>
-                                <Avatar size="lg" />
+                                <Box position="relative">
+                                    <Avatar size="xl" />
+                                    <Button
+                                        position="absolute"
+                                        right="-10px"
+                                        top="60px"
+                                        size="sm"
+                                        p={0}
+                                        variant="ghost"
+                                        bg="#F1F1F1"
+                                        color="#3c3c3c"
+                                        fontSize="lg"
+                                        borderRadius="full"
+                                        shadow="md"
+                                    >
+                                        <MdModeEdit />
+                                    </Button>
+                                </Box>
                                 <VStack spacing={6} align="flex-start">
-                                    <VStack align="flex-start" spacing={0}>
-                                        <Heading size="lg">
-                                            Gregory Tran
-                                        </Heading>
-                                        <Text>ADMIN-0020</Text>
-                                    </VStack>
-                                    <VStack align="flex-start">
+                                    <VStack align="flex-start" spacing={3}>
+                                        <VStack align="flex-start" spacing={1}>
+                                            <Heading size="md">
+                                                Gregory Tran
+                                            </Heading>
+                                            <Text>ADMIN-0020</Text>{" "}
+                                        </VStack>
                                         <Text>tran@shora.cos</Text>
                                     </VStack>
+
                                     <VStack align="flex-start" spacing={0}>
                                         <Text fontSize="sm" color="#919191">
                                             Phone number
@@ -216,7 +245,7 @@ function App() {
                             <VStack align="flex-end" spacing={12}>
                                 <HStack>
                                     <Button size="sm">Edit profile</Button>
-                                    <Button size="sm">
+                                    <Button size="sm" p={0} fontSize="2xl">
                                         <BiDotsVerticalRounded />
                                     </Button>
                                 </HStack>
@@ -230,6 +259,7 @@ function App() {
                         </Flex>
                     </Box>
                 </Flex>
+                <Footer />
             </Flex>
         </Grid>
     );
