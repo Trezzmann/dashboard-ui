@@ -41,6 +41,7 @@ function App() {
                         borderRadius={"md"}
                         border="1px solid #e5e5e5"
                         position="relative"
+                        pb={6}
                     >
                         <HStack
                             borderBottom="1px solid #e5e5e5"
@@ -81,7 +82,7 @@ function App() {
                             </Button>
                         </HStack>
                         <Box
-                            pb={24}
+                            pb={20}
                             h="100%"
                             overflowY="auto"
                             __css={{
@@ -107,11 +108,12 @@ function App() {
                         </Box>
                     </Box>
                     <Box
-                        // maxH={"85vh"}
+                        maxH={"85vh"}
                         w="60%"
                         bg="#fff"
                         borderRadius={"md"}
                         border="1px solid #e5e5e5"
+                        pb={6}
                     >
                         <Flex
                             borderBottom="1px solid #e5e5e5"
