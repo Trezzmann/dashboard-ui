@@ -1,7 +1,7 @@
 import { Flex, Grid } from "@chakra-ui/react";
 import { Header, SideMenu } from "./layouts";
 import { Footer } from "./layouts/Footer";
-import { Admin } from "./pages/Admin";
+import { Dashboard } from "./pages/Dashboard";
 
 function App() {
     return (
@@ -14,7 +14,7 @@ function App() {
             <SideMenu />
             <Flex direction="column">
                 <Header />
-                <Admin />
+                <Dashboard />
                 <Footer />
             </Flex>
         </Grid>
