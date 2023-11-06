@@ -201,6 +201,15 @@ export const Dashboard = () => {
                     </VStack>
                 </Flex>
             </Box>
+            <Flex
+                bg="#fff"
+                borderRadius="lg"
+                border="1px solid #e5e5e5"
+                w="auto"
+                flex={1}
+                h="60vh"
+                p={6}
+            ></Flex>
         </Flex>
     );
 };
