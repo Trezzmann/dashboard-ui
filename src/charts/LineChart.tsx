@@ -23,6 +23,9 @@ export const LineChart = () => {
         chart: {
             height: 350,
             type: "line",
+            toolbar: {
+                show: false,
+            },
             zoom: {
                 enabled: false,
             },
