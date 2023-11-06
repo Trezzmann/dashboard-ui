@@ -7,15 +7,15 @@ export const LineChart2 = () => {
     const series = [
         {
             name: "Sales",
-            data: [10, 41, 35, 19, 49, 4, 10],
+            data: [0, 12, 18, 10, 20, 22, 28],
         },
         {
             name: "Shora",
-            data: [5, 12, 25, 11, 32, 23, 48],
+            data: [5, 8, 12, 10, 18, 16, 22],
         },
         {
             name: "Agents",
-            data: [3, 32, 6, 12, 4, 32, 18],
+            data: [3, 6, 12, 18, 10, 8, 18],
         },
     ];
 

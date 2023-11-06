@@ -6,6 +6,7 @@ import {
     Select,
     Stack,
     Text,
+    VStack,
 } from "@chakra-ui/react";
 import { BsCalendar4Event } from "react-icons/bs";
 import { LineChart } from "../charts/LineChart";
@@ -82,8 +83,58 @@ export const Dashboard = () => {
                 <Flex p={6}>
                     <Box w="65%" pr={12} borderRight="1px solid #cccccc">
                         <LineChart2 />
+                        <Flex justify={"space-between"} align={"center"}>
+                            <Flex
+                                width={"50%"}
+                                justify={"flex-start"}
+                                wrap={"wrap"}
+                                gap="8px 60px"
+                                pl={"12"}
+                            >
+                                <HStack>
+                                    <Box w={2} h={2} bg="#4DB671" />
+                                    <Text color="#7e7e7e">All Sales</Text>
+                                </HStack>
+                                <HStack>
+                                    <Box w={2} h={2} bg="#F4BF61" />
+                                    <Text color="#7e7e7e">Provider Sales</Text>
+                                </HStack>
+                                <HStack>
+                                    <Box w={2} h={2} bg="#530B95" />
+                                    <Text color="#7e7e7e">Store Sales</Text>
+                                </HStack>
+                            </Flex>
+                            <VStack
+                                align={"flex-end"}
+                                spacing={0}
+                                color="#7e7e7e"
+                            >
+                                <Text>
+                                    <Text fontWeight={"bold"} as="span">
+                                        973
+                                    </Text>
+                                    (97%) of{" "}
+                                    <Text fontWeight={"bold"} as="span">
+                                        1003
+                                    </Text>
+                                </Text>
+                                <Text>Transaction completion rate</Text>
+                            </VStack>
+                        </Flex>
                     </Box>
-                    <Flex w="35%" justify={"center"} align={"center"}>
+                    <Flex
+                        w="35%"
+                        justify={"center"}
+                        align={"center"}
+                        position="relative"
+                    >
+                        <Box pos="absolute" top={0} right={0}>
+                            <Select placeholder="" bg="#fff">
+                                <option value="option1">AGENT-0002</option>
+                                <option value="option2">AGENT-0003</option>
+                                <option value="option3">AGENT-0004</option>
+                            </Select>
+                        </Box>
                         <DonutChart2 />
                     </Flex>
                 </Flex>
