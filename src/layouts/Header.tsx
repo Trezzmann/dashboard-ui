@@ -27,7 +27,7 @@ export const Header = () => (
         top={0}
         zIndex="10"
     >
-        <Heading size={"lg"}>Admins</Heading>
+        <Heading size={"lg"}>Dashboard</Heading>
         <HStack pl={8} borderLeft="1px solid #e5e5e5" h="full" spacing={12}>
             <Box fontSize="2xl" pos="relative">
                 <IoNotificationsOutline />

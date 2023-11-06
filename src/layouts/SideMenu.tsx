@@ -23,7 +23,7 @@ export const SideMenu = () => {
         >
             <Flex
                 pt={5}
-                fontSize={"5xl"}
+                fontSize={"40px"}
                 justifyContent="center"
                 color="#500586"
             >

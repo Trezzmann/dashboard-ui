@@ -6,15 +6,15 @@ import { FaUserTie } from "react-icons/fa";
 export const LineChart2 = () => {
     const series = [
         {
-            name: "Active",
+            name: "Sales",
             data: [10, 41, 35, 19, 49, 4, 10],
         },
         {
-            name: "Deactivated",
+            name: "Shora",
             data: [5, 12, 25, 11, 32, 23, 48],
         },
         {
-            name: "Inactive",
+            name: "Agents",
             data: [3, 32, 6, 12, 4, 32, 18],
         },
     ];
@@ -30,7 +30,7 @@ export const LineChart2 = () => {
         dataLabels: {
             enabled: false,
         },
-        colors: ["#97DBB4", "#CBCDCC", "#CD8C8C"],
+        colors: ["#97DBB4", "#3A083E", "#CD8C8C"],
 
         stroke: {
             curve: "smooth",
@@ -39,7 +39,7 @@ export const LineChart2 = () => {
         yaxis: {
             labels: {
                 formatter: function (value: number) {
-                    return value + " hr";
+                    return value + " M";
                 },
             },
         },
@@ -89,7 +89,7 @@ export const LineChart2 = () => {
                     </VStack>
                     <VStack spacing={0} align="flex-end">
                         <HStack>
-                            <Box w={4} h={2} bg="#CBCDCC" borderRadius="full" />
+                            <Box w={4} h={2} bg="#3A083E" borderRadius="full" />
                             <Text color="#7e7e7e">Shora</Text>
                         </HStack>
                         <Text>

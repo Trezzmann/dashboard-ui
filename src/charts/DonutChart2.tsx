@@ -60,7 +60,7 @@ export const DonutChart2 = () => {
                 type="donut"
                 width={280}
             />
-            <VStack align={"flex-start"} fontSize={"sm"}>
+            <VStack align={"flex-start"} fontSize={"sm"} spacing={0}>
                 <VStack spacing={0} align="flex-start">
                     <HStack>
                         <Box w={4} h={2} bg="#3183EF" borderRadius="full" />
