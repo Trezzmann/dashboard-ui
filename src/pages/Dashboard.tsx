@@ -54,17 +54,15 @@ export const Dashboard = () => {
           </Box>
           <Input
             placeholder="Start date"
-            htmlSize={10}
+            htmlSize={11}
             w="auto"
             variant="unstyled"
           />
-          <Text mr={6} ml={"-3"}>
-            To
-          </Text>
+          <Text mr={5}>To</Text>
           <Input
             placeholder="End date"
             variant="unstyled"
-            htmlSize={10}
+            htmlSize={12}
             w="auto"
           />
         </Flex>
