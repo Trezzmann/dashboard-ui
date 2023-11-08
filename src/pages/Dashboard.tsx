@@ -5,7 +5,6 @@ import {
   CircularProgressLabel,
   Flex,
   HStack,
-  Input,
   Select,
   Stack,
   Text,
@@ -18,13 +17,14 @@ import {
   Td,
   TableContainer,
 } from "@chakra-ui/react";
-import { BsCalendar4Event, BsPatchCheckFill } from "react-icons/bs";
+import { BsPatchCheckFill } from "react-icons/bs";
 import { LineChart } from "../charts/LineChart";
 import { LineChart2 } from "../charts/LineChart2";
 import { DonutChart } from "../charts/DonutChart";
 import { DonutChart2 } from "../charts/DonutChart2";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
+import { DateRangePicker } from "../components/DateRangePicker";
 
 export const Dashboard = () => {
   return (
@@ -41,31 +41,7 @@ export const Dashboard = () => {
             <option value="option1">Store: All</option>
           </Select>
         </HStack>
-        <Flex
-          maxW={"fit-content"}
-          align="center"
-          border="1px solid #dfdfdf"
-          borderRadius="lg"
-          pl="2"
-          bg="#fff"
-        >
-          <Box color="gray.30" pr={3} fontSize="xl">
-            <BsCalendar4Event />
-          </Box>
-          <Input
-            placeholder="Start date"
-            htmlSize={11}
-            w="auto"
-            variant="unstyled"
-          />
-          <Text mr={5}>To</Text>
-          <Input
-            placeholder="End date"
-            variant="unstyled"
-            htmlSize={12}
-            w="auto"
-          />
-        </Flex>
+        <DateRangePicker />
       </Stack>
       <Box bg="#fff" w="full" borderRadius="lg" border="1px solid #e5e5e5">
         <Flex p={6}>

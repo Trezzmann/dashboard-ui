@@ -8,7 +8,10 @@ const inputStyles = {
         borderWidth: 1,
         _focus: {
           borderColor: "primary.400",
-          borderWidth: 2,
+          backgroundColor: "#fff",
+        },
+        _hover: {
+          backgroundColor: "gray.50",
         },
       },
     },
