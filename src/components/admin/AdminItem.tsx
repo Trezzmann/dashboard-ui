@@ -12,8 +12,18 @@ import {
 } from "@chakra-ui/react";
 
 import { BiDotsVerticalRounded } from "react-icons/bi";
+import AdminStatus from "./AdminStatus";
 
-export const AdminItem = () => {
+interface AdminItemProps {
+  id: string;
+  name: string;
+  lastLoggedIn: string;
+  profileImage: string;
+  active: boolean;
+}
+
+export const AdminItem = (props: AdminItemProps) => {
+  const { name, lastLoggedIn, profileImage, active, id } = props;
   return (
     <Box
       pt={4}
@@ -31,31 +41,17 @@ export const AdminItem = () => {
       >
         <HStack spacing={4} alignContent="flex-start">
           <Box pos="relative">
-            <Avatar size="md" />
-            <Box
-              w={5}
-              h={5}
-              borderRadius="full"
-              bg="green.500"
-              pos="absolute"
-              right="-8px"
-              bottom={0}
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              color="#fff"
-            >
-              <BiDotsVerticalRounded />
-            </Box>
+            <Avatar size="md" src={profileImage} />
+            <AdminStatus active={active} />
           </Box>
           <VStack spacing={0} alignItems="flex-start">
-            <Text fontWeight="bold">Gregory Tran</Text>
-            <Text fontSize="small">ADMIN-0020</Text>
+            <Text fontWeight="bold">{name}</Text>
+            <Text fontSize="small">{id}</Text>
           </VStack>
         </HStack>
         <HStack spacing={4} alignItems="flex-start">
           <Text color="#919191" fontSize="small">
-            4 days ago
+            {lastLoggedIn}
           </Text>
           <Menu placement="left-start">
             <MenuButton

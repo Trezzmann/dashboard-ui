@@ -5,94 +5,20 @@ import {
   Flex,
   HStack,
   Heading,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Text,
   VStack,
 } from "@chakra-ui/react";
-
-import { BiSearch } from "react-icons/bi";
-import { IoMdAdd } from "react-icons/io";
-
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import { MdMailOutline, MdModeEdit, MdTune } from "react-icons/md";
+import { MdMailOutline, MdModeEdit } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
-import { AdminItem } from "../components/AdminItem";
 import { MainLayout } from "../layouts/MainLayout";
+import { AdminList } from "../components/admin";
 
 export const Admin = () => {
   return (
     <MainLayout title="Admins">
       <Flex px={16} py={6} gap={4}>
-        <Box
-          maxH={"85vh"}
-          overflowY="hidden"
-          w="40%"
-          bg="#fff"
-          borderRadius={"md"}
-          border="1px solid #e5e5e5"
-          position="relative"
-          pb={6}
-        >
-          <HStack
-            borderBottom="1px solid #e5e5e5"
-            py={3}
-            px={6}
-            position="sticky"
-            top={0}
-            bg="#fff"
-            spacing={3}
-          >
-            <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                fontSize="2xl"
-                color="gray.500"
-              >
-                <BiSearch />
-              </InputLeftElement>
-              <Input placeholder="Search" bg="#F3F3F3" variant="filled" />
-            </InputGroup>
-            <Button variant="ghost" fontSize="2xl" p={0}>
-              <MdTune />
-            </Button>
-            <Button
-              p={0}
-              variant="solid"
-              colorScheme="primary"
-              fontSize="3xl"
-              borderRadius="full"
-            >
-              <IoMdAdd />
-            </Button>
-          </HStack>
-          <Box
-            pb={20}
-            h="100%"
-            overflowY="auto"
-            __css={{
-              "&::-webkit-scrollbar": {
-                w: "1",
-              },
-              "&::-webkit-scrollbar-track": {
-                w: "1",
-              },
-              "&::-webkit-scrollbar-thumb": {
-                visibility: "hidden",
-                borderRadius: "full",
-                bg: `#dcdcdc`,
-              },
-              "&:hover::-webkit-scrollbar-thumb": {
-                visibility: "visible",
-              },
-            }}
-          >
-            <AdminItem />
-            <AdminItem />
-            <AdminItem />
-          </Box>
-        </Box>
+        <AdminList />
         <Box
           maxH={"85vh"}
           w="60%"
