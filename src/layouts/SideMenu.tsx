@@ -1,11 +1,11 @@
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { RiDashboard2Fill } from "react-icons/ri";
-// import { IoPerson } from "react-icons/io5";
 import { FaHandshake, FaStore } from "react-icons/fa";
 import { BiSolidReport } from "react-icons/bi";
 import { BsBarChartLineFill } from "react-icons/bs";
 import { FaUserCog, FaUserTie } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export const SideMenu = () => {
   return (
@@ -30,20 +30,22 @@ export const SideMenu = () => {
         <BsFillCartCheckFill />
       </Flex>
       <Flex direction="column">
-        <VStack
-          p={3}
-          alignItems="center"
-          spacing={1}
-          color="#767676"
-          transition="all ease .3s"
-          _hover={{ color: "#500586" }}
-          cursor="pointer"
-        >
-          <Box fontSize={"2xl"}>
-            <RiDashboard2Fill />
-          </Box>
-          <Text fontSize="small">Dashboard</Text>
-        </VStack>
+        <NavLink to={"/"}>
+          <VStack
+            p={3}
+            alignItems="center"
+            spacing={1}
+            color="#767676"
+            transition="all ease .3s"
+            _hover={{ color: "#500586" }}
+            cursor="pointer"
+          >
+            <Box fontSize={"2xl"}>
+              <RiDashboard2Fill />
+            </Box>
+            <Text fontSize="small">Dashboard</Text>
+          </VStack>
+        </NavLink>
         <VStack
           p={3}
           alignItems="center"
@@ -114,22 +116,24 @@ export const SideMenu = () => {
           </Box>
           <Text fontSize="small">Transactions</Text>
         </VStack>
-        <VStack
-          p={3}
-          alignItems="center"
-          spacing={1}
-          color="#500586"
-          transition="all ease .3s"
-          _hover={{ color: "#500586" }}
-          cursor="pointer"
-          fontWeight="bold"
-          justifyContent="center"
-        >
-          <Box fontSize={"2xl"}>
-            <FaUserCog />
-          </Box>
-          <Text fontSize="small">Admins</Text>
-        </VStack>
+        <NavLink to={"/admins"}>
+          <VStack
+            p={3}
+            alignItems="center"
+            spacing={1}
+            color="#500586"
+            transition="all ease .3s"
+            _hover={{ color: "#500586" }}
+            cursor="pointer"
+            fontWeight="bold"
+            justifyContent="center"
+          >
+            <Box fontSize={"2xl"}>
+              <FaUserCog />
+            </Box>
+            <Text fontSize="small">Admins</Text>
+          </VStack>
+        </NavLink>
       </Flex>
     </Flex>
   );

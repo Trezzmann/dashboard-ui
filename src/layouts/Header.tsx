@@ -14,7 +14,11 @@ import {
 import { IoNotificationsOutline } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-export const Header = () => (
+interface HeaderProps {
+  title: string;
+}
+
+export const Header = ({ title = "Shora" }: HeaderProps) => (
   <Flex
     bg="#fff"
     w="full"
@@ -28,7 +32,7 @@ export const Header = () => (
     top={0}
     zIndex="10"
   >
-    <Heading size={"lg"}>Dashboard</Heading>
+    <Heading size={"lg"}>{title}</Heading>
     <HStack pl={8} borderLeft="1px solid #e5e5e5" h="full" spacing={12}>
       <Button variant={"ghost"} borderRadius={"full"} px={2}>
         <Box fontSize="2xl" pos="relative">
