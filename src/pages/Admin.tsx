@@ -7,7 +7,7 @@ export const Admin = () => {
   return (
     <AdminContextProvider>
       <MainLayout title="Admins">
-        <Flex px={16} py={6} gap={4}>
+        <Flex px={16} py={6} gap={4} wrap={{ base: "wrap", lg: "nowrap" }}>
           <AdminList />
           <AdminDetails />
         </Flex>

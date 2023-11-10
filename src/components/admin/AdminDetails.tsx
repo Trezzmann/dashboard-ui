@@ -13,7 +13,7 @@ export const AdminDetails = () => {
     <Box
       minH={"60vh"}
       maxH={"85vh"}
-      w="60%"
+      w={{ base: "100%", lg: "60%" }}
       bg="#fff"
       borderRadius={"md"}
       border="1px solid #e5e5e5"

@@ -28,7 +28,7 @@ export const AdminList = () => {
     <Box
       maxH={"85vh"}
       overflowY="hidden"
-      w="40%"
+      w={{ base: "100%", lg: "40%" }}
       bg="#fff"
       borderRadius={"md"}
       border="1px solid #e5e5e5"
