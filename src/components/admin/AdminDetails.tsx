@@ -1,11 +1,9 @@
 import { Box, Button, Flex, HStack } from "@chakra-ui/react";
 import { MdMailOutline, MdModeEdit } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
-import { AdminDetailsTab } from "./AdminDetailsTab";
-import { AdminProfileInfo } from "./AdminProfileInfo";
-import { AdminProfileSummary } from "./AdminProfileSummary";
 import { useContext } from "react";
 import { AdminContext } from "../../contexts/AdminContextProvider";
+import { AdminDetailsTab, AdminProfileInfo, AdminProfileSummary } from ".";
 
 export const AdminDetails = () => {
   const { activeTab } = useContext(AdminContext);
