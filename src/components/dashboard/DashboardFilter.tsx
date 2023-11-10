@@ -1,5 +1,4 @@
 import { HStack, Select, Stack } from "@chakra-ui/react";
-import React from "react";
 import { DateRangePicker } from "../DateRangePicker";
 
 export const DashboardFilter = () => {
