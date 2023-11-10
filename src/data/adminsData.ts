@@ -5,6 +5,7 @@ export const adminsData = [
     lastLoggedIn: "2 days ago",
     profileImage: "/images/person1.jpg",
     active: true,
+    email: "tran@mail.com",
   },
   {
     id: "ADMIN-0021",
@@ -12,6 +13,7 @@ export const adminsData = [
     lastLoggedIn: "27 Jun",
     profileImage: "/images/person2.jpg",
     active: true,
+    email: "price@mail.com",
   },
   {
     id: "ADMIN-0025",
@@ -19,6 +21,7 @@ export const adminsData = [
     lastLoggedIn: "5 hours ago",
     profileImage: "/images/person3.jpg",
     active: false,
+    email: "evans@mail.com",
   },
   {
     id: "ADMIN-0041",
@@ -26,6 +29,7 @@ export const adminsData = [
     lastLoggedIn: "14 Jul",
     profileImage: "/images/person4.jpg",
     active: true,
+    email: "mendes@mail.com",
   },
   {
     id: "ADMIN-0068",
@@ -33,6 +37,7 @@ export const adminsData = [
     lastLoggedIn: "2 Jan",
     profileImage: "/images/person5.jpg",
     active: true,
+    email: "moreno@mail.com",
   },
   {
     id: "ADMIN-0065",
@@ -40,6 +45,7 @@ export const adminsData = [
     lastLoggedIn: "2 Jan",
     profileImage: "/images/person6.jpg",
     active: true,
+    email: "mendes@mail.com",
   },
   {
     id: "ADMIN-0078",
@@ -47,6 +53,7 @@ export const adminsData = [
     lastLoggedIn: "18 Oct",
     profileImage: "/images/person7.jpg",
     active: false,
+    email: "smith@mail.com",
   },
   {
     id: "ADMIN-0036",
@@ -54,6 +61,7 @@ export const adminsData = [
     lastLoggedIn: "2 Jan",
     profileImage: "/images/person8.jpg",
     active: true,
+    email: "ortis@mail.com",
   },
   {
     id: "ADMIN-0014",
@@ -61,6 +69,7 @@ export const adminsData = [
     lastLoggedIn: "27 Jan",
     profileImage: "/images/person9.jpg",
     active: false,
+    email: "hamim@mail.com",
   },
   {
     id: "ADMIN-0002",
@@ -68,5 +77,6 @@ export const adminsData = [
     lastLoggedIn: "20 Jan",
     profileImage: "/images/person10.jpg",
     active: true,
+    email: "edin@mail.com",
   },
 ];

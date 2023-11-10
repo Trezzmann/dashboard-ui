@@ -13,6 +13,8 @@ import {
 
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import AdminStatus from "./AdminStatus";
+import { useContext } from "react";
+import { AdminContext } from "../../contexts/AdminContextProvider";
 
 interface AdminItemProps {
   id: string;
@@ -24,6 +26,10 @@ interface AdminItemProps {
 
 export const AdminItem = (props: AdminItemProps) => {
   const { name, lastLoggedIn, profileImage, active, id } = props;
+  const { viewAdminDetails } = useContext(AdminContext);
+  const viewInfo = () => {
+    viewAdminDetails(id);
+  };
   return (
     <Box
       pt={4}
@@ -32,6 +38,7 @@ export const AdminItem = (props: AdminItemProps) => {
       _hover={{
         background: "#EDE5F4",
       }}
+      onClick={viewInfo}
     >
       <Flex
         justifyContent="space-between"

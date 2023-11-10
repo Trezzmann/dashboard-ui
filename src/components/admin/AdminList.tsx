@@ -6,14 +6,24 @@ import {
   InputGroup,
   InputLeftElement,
 } from "@chakra-ui/react";
-
 import { BiSearch } from "react-icons/bi";
 import { IoMdAdd } from "react-icons/io";
 import { MdTune } from "react-icons/md";
-import { adminsData } from "../../data/adminsData";
 import { AdminItem } from "./AdminItem";
+import { useContext, useState } from "react";
+import { AdminContext } from "../../contexts/AdminContextProvider";
 
 export const AdminList = () => {
+  const { adminsList, filter } = useContext(AdminContext);
+  const [searchVal, setSearchVal] = useState<string>("");
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchVal(e.target.value);
+    setTimeout(() => {
+      filter(e.target.value);
+    }, 800);
+  };
+
   return (
     <Box
       maxH={"85vh"}
@@ -42,7 +52,13 @@ export const AdminList = () => {
           >
             <BiSearch />
           </InputLeftElement>
-          <Input placeholder="Search" bg="#F3F3F3" variant="filled" />
+          <Input
+            placeholder="Search"
+            bg="#F3F3F3"
+            variant="filled"
+            value={searchVal}
+            onChange={onChange}
+          />
         </InputGroup>
         <Button variant="ghost" fontSize="2xl" p={0}>
           <MdTune />
@@ -78,9 +94,15 @@ export const AdminList = () => {
           },
         }}
       >
-        {adminsData.map((admin, index) => (
-          <AdminItem {...admin} key={index} />
-        ))}
+        {adminsList?.length ? (
+          adminsList?.map((admin, index) => (
+            <AdminItem {...admin} key={index} />
+          ))
+        ) : (
+          <Box textAlign="center" py={12}>
+            No admin found...
+          </Box>
+        )}
       </Box>
     </Box>
   );
