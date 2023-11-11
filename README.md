@@ -1,6 +1,6 @@
 # Shora UI
 
-This project is a UI for a management application I built to enhance my learning. It provides a user-friendly interface for managing various aspects of an application, such as dashboards and administrators, stocks, etc...
+This project is a UI for a management application I built to enhance my skills. It provides a user-friendly interface for managing various aspects of an application, such as dashboards and administrators, stocks, etc...
 
 ### Features
 - Dashboard: The dashboard section of the application is implemented with simulated data and provides an overview of key metrics.
@@ -27,3 +27,5 @@ This project is a UI for a management application I built to enhance my learning
 - Stocks management
 - Reports managment
 - Transactions management
+### Demo
+[Click here to see demo](https://shora-demo.vercel.app/)
